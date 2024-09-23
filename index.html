@@ -38,7 +38,16 @@
     </div>
 </body>
 <!-- partial -->
-  <script  src="aarinformatica.github.io
-/script.js"></script>
+  <script ./script.js"></script>
+  <script>
+    function toggleNav() {
+            const sidebar = document.getElementById("mySidebar");
+            const main = document.getElementById("main");
+            sidebar.classList.toggle("closed");
+            if (window.innerWidth <= 768) {
+                sidebar.classList.toggle("open");
+            }
+        }
+  </script>
 </body>
 </html>
