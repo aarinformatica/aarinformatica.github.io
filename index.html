@@ -16,22 +16,21 @@
 </head>
 <body>
     <style>
-        :root {
+         :root {
             --primary-color: #4a90e2;
             --bg-color: #f4f7fa;
             --text-color: #333;
-            --sidebar-bg: #ffffff;
+            --sidebar-bg: #1C1C1C;
             --sidebar-hover: #e6f0ff;
+            --text1-color:	white;
         }
-
         body {
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: var(--bg-color);
+            background-color: #1C1C1C;
             color: var(--text-color);
         }
-
         .sidebar {
             height: 100%;
             width: 250px;
@@ -45,7 +44,6 @@
             box-shadow: 0 0 15px rgba(0,0,0,0.1);
             white-space: nowrap;
         }
-
         .sidebar-header {
             padding: 20px;
             display: flex;
@@ -53,101 +51,165 @@
             justify-content: space-between;
             border-bottom: 1px solid #e0e0e0;
         }
-
-            .sidebar-header h3 {
-                margin: 0;
-                font-size: 1.2em;
-                color: var(--primary-color);
-            }
-
+        .sidebar-header h3 {
+            margin: 0;
+            font-size: 1.2em;
+            color: var(--text1-color);
+        }
         .toggle-btn {
             background: none;
             border: none;
-            color: var(--text-color);
+            color: var(--text1-color);
             font-size: 20px;
             cursor: pointer;
             transition: 0.2s;
         }
-
-            .toggle-btn:hover {
-                color: var(--primary-color);
-            }
-
+        .toggle-btn:hover {
+            color: var(--primary-color);
+        }
         .sidebar a {
             padding: 15px 25px;
             text-decoration: none;
             font-size: 16px;
-            color: var(--text-color);
+            color: var(--text1-color);
             display: flex;
             align-items: center;
             transition: 0.2s;
         }
-
-            .sidebar a:hover {
-                background-color: var(--sidebar-hover);
-                color: var(--primary-color);
-            }
-
-            .sidebar a i {
-                min-width: 30px;
-                font-size: 20px;
-            }
-
+        .sidebar a:hover {
+            background-color: var(--sidebar-hover);
+            color: var(--primary-color);
+        }
+        .sidebar a i {
+            min-width: 30px;
+            font-size: 20px;
+        }
         #main {
             transition: margin-left .3s;
             padding: 20px;
             margin-left: 250px;
         }
-
         .sidebar.closed {
             width: 70px;
         }
-
-            .sidebar.closed .sidebar-header h3 {
-                display: none;
-            }
-
-            .sidebar.closed a span {
-                display: none;
-            }
-
-            .sidebar.closed ~ #main {
-                margin-left: 70px;
-            }
-
+        .sidebar.closed .sidebar-header h3 {
+            display: none;
+        }
+        .sidebar.closed a span {
+            display: none;
+        }
+        .sidebar.closed ~ #main {
+            margin-left: 70px;
+        }
         @media screen and (max-width: 768px) {
             .sidebar {
                 width: 70px;
             }
-
-                .sidebar .sidebar-header h3 {
-                    display: none;
-                }
-
-                .sidebar a span {
-                    display: none;
-                }
-
+            .sidebar .sidebar-header h3 {
+                display: none;
+            }
+            .sidebar a span {
+                display: none;
+            }
             #main {
                 margin-left: 70px;
             }
-
             .sidebar.open {
                 width: 250px;
             }
-
-                .sidebar.open .sidebar-header h3 {
-                    display: block;
-                }
-
-                .sidebar.open a span {
-                    display: inline;
-                }
-
-                .sidebar.open ~ #main {
-                    margin-left: 250px;
-                }
+            .sidebar.open .sidebar-header h3 {
+                display: block;
+            }
+            .sidebar.open a span {
+                display: inline;
+            }
+            .sidebar.open ~ #main {
+                margin-left: 250px;
+            }
         }
+
+h2 {
+  position: relative;
+  font-size: 50px;
+  color: white;
+}
+
+h2:after {
+  content: attr(title);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: scaleY(-1);
+  transform-origin: bottom;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 30%, rgba(255,0,0.5) 90%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.textoneon1{
+  /*color: white;
+  text-shadow: yellow 3px 3px 7px;
+  font-size: 20px;*/
+  text-align: center;
+  color: #fff;
+  font-size: 2vw;
+  text-shadow: 1vw 1vw 1vw #000, 0 0 3vw #24ff00, 0 0 3vw #24ff00, 0 0 3vw #24ff00;
+}        
+
+/*Loop Neon*/
+.title_loop {
+  width:100%;
+  height:auto;
+  text-align: center;
+}
+.title_loop .title {
+    font-family: 'open_sansregular';
+    font-size: 6em;
+    color: #fff;
+    text-shadow: 0 -50px 100px, 0 0 2px, 0 0 1em #00afb3, 0 0 0.5em #008d93, 0 0 0.1em #00abff, 0 10px 5px #000;
+}
+.title_loop .title span{
+  animation: blink linear infinite 2s;
+  font-weight: bold;
+  font-family: 'open_sansbold';
+}
+.title_loop .title span:nth-of-type(2){
+  animation: blink linear infinite 10s;
+}
+@keyframes blink {
+  78% {
+    color: inherit;
+    text-shadow: inherit;
+  }
+  79%{
+     color: #242424;
+  }
+  80% {
+    
+    text-shadow: none;
+  }
+  81% {
+    color: inherit;
+    text-shadow: inherit;
+  }
+  82% {
+    color: #242424;
+    text-shadow: none;
+  }
+  83% {
+    color: inherit;
+    text-shadow: inherit;
+  }
+  92% {
+    color: #242424;
+    text-shadow: none;
+  }
+  92.5% {
+    color: inherit;
+    text-shadow: inherit;
+  }
+}
+/*Loop Neon*/
     </style>
 <div id="mySidebar" class="sidebar">
         <div class="sidebar-header">
@@ -164,8 +226,11 @@
             <a href="#"><i class="fa-solid fa-circle-info" aria-hidden="true"></i> <span>Sobre</span></a>    
         </div>
     <div id="main">
-        <h2>Site em construção.</h2>
-        <p>Aguarde por novidades!</p>
+      <div class="title_loop"> 
+     <div class="title"> <span>Site em </span> construção.</div> 
+        </div>
+      <br>
+        <p class="textoneon1">Aguarde por novidades!</p>
     </div>
 </body>
 <!-- partial -->
