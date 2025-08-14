@@ -1,375 +1,103 @@
-<html lang="pt-br" >
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <title>Bem Vindo!</title>
-  <link rel="stylesheet" href="./style.css">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>A. A. R. Informática</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<!-- partial:index.partial.html -->
-<head>
-  <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicial</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
-<body>
-    <style>
-         :root {
-            --primary-color: #4a90e2;
-            --bg-color: #f4f7fa;
-            --text-color: #333;
-            --sidebar-bg: #1C1C1C	;
-            --sidebar-hover: #e6f0ff;
-            --text1-color:	white;
-        }
-        body {
-            font-family: 'Poppins', sans-serif;
-            margin: 0;
-            padding: 0;
-            background: url(https://image.freepik.com/fotos-gratis/renderizacao-3d-de-holofotes-em-uma-parede-de-tijolos-grunge_1048-6284.jpg);
-            background-size: cover;
-        }
-        .sidebar {
-            height: 100%;
-            width: 250px;
-            position: fixed;
-            z-index: 1;
-            top: 0;
-            left: 0;
-            background-color: var(--sidebar-bg);
-            overflow-x: hidden;
-            transition: 0.3s;
-            box-shadow: 0 0 15px rgba(0,0,0,0.1);
-            white-space: nowrap;
-            opacity: 75%;
-        }
-        .sidebar-header {
-            padding: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            border-bottom: 1px solid #e0e0e0;
-        }
-        .sidebar-header h3 {
-            margin: 0;
-            font-size: 1.2em;
-            color: var(--text1-color);
-        }
-        .toggle-btn {
-            background: none;
-            border: none;
-            color: var(--text1-color);
-            font-size: 20px;
-            cursor: pointer;
-            transition: 0.2s;
-        }
-        .toggle-btn:hover {
-            color: var(--primary-color);
-        }
-        .sidebar a {
-            padding: 15px 25px;
-            text-decoration: none;
-            font-size: 16px;
-            color: var(--text1-color);
-            display: flex;
-            align-items: center;
-            transition: 0.2s;
-        }
-        .sidebar a:hover {
-            background-color: var(--sidebar-hover);
-            color: var(--primary-color);
-        }
-        .sidebar a i {
-            min-width: 30px;
-            font-size: 20px;
-        }
-        #main {
-            transition: margin-left .3s;
-            padding: 20px;
-            margin-left: 250px;
-        }
-        .sidebar.closed {
-            width: 70px;
-        }
-        .sidebar.closed .sidebar-header h3 {
-            display: none;
-        }
-        .sidebar.closed a span {
-            display: none;
-        }
-        .sidebar.closed ~ #main {
-            margin-left: 70px;
-        }
-        @media screen and (max-width: 768px) {
-            .sidebar {
-                width: 70px;
-            }
-            .sidebar .sidebar-header h3 {
-                display: none;
-            }
-            .sidebar a span {
-                display: none;
-            }
-            #main {
-                margin-left: 70px;
-            }
-            .sidebar.open {
-                width: 250px;
-            }
-            .sidebar.open .sidebar-header h3 {
-                display: block;
-            }
-            .sidebar.open a span {
-                display: inline;
-            }
-            .sidebar.open ~ #main {
-                margin-left: 250px;
-            }
-        }
 
-h2 {
-  position: relative;
-  font-size: 50px;
-  color: white;
-}
-
-h2:after {
-  content: attr(title);
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  transform: scaleY(-1);
-  transform-origin: bottom;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 30%, rgba(255,0,0.5) 90%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.textoneon1{
-  /*color: white;
-  text-shadow: yellow 3px 3px 7px;
-  font-size: 20px;*/
-  text-align: center;
-  color: #fff;
-  font-size: 2vw;
-  text-shadow: 1vw 1vw 1vw #000, 0 0 3vw #24ff00, 0 0 3vw #24ff00, 0 0 3vw #24ff00;
-}        
-
-/*Loop Neon*/
-.title_loop {
-  width:100%;
-  height:auto;
-  text-align: center;
-}
-.title_loop .title {
-    font-family: 'open_sansregular';
-    font-size: 6em;
-    color: #fff;
-    text-shadow: 0 -50px 100px, 0 0 2px, 0 0 1em #00afb3, 0 0 0.5em #008d93, 0 0 0.1em #00abff, 0 10px 5px #000;
-}
-.title_loop .title span{
-  animation: blink linear infinite 2s;
-  font-weight: bold;
-  font-family: 'open_sansbold';
-}
-.title_loop .title span:nth-of-type(2){
-  animation: blink linear infinite 10s;
-}
-@keyframes blink {
-  78% {
-    color: inherit;
-    text-shadow: inherit;
-  }
-  79%{
-     color: #242424;
-  }
-  80% {
-    
-    text-shadow: none;
-  }
-  81% {
-    color: inherit;
-    text-shadow: inherit;
-  }
-  82% {
-    color: #242424;
-    text-shadow: none;
-  }
-  83% {
-    color: inherit;
-    text-shadow: inherit;
-  }
-  92% {
-    color: #242424;
-    text-shadow: none;
-  }
-  92.5% {
-    color: inherit;
-    text-shadow: inherit;
-  }
-}
-/*Loop Neon*/
-      
-/*modal*/
-.modal-overlay {
-  background-color: rgba(0, 0, 0, 0.342);
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  display: none;
-  align-items: center;
-  justify-content: center;
-  overflow-y: auto;
-}
-
-.modal {
-  margin: 1rem;
-  width: 33%;
-  max-width: 600px;
-  height: auto;
-  min-height: 300px;
-  background: url(https://i.gifer.com/origin/5a/5ab98406cc6c8fbba9ddb014c2bcdb80_w200.gif);
-  background-size: cover;
-  opacity:70%;
-  border-radius: 11px;
-  display: none;
-  flex-direction: column;
-  overflow: hidden;
-  -webkit-animation: scale-in-center 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  animation: scale-in-center 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-@media only screen and (max-width: 600px) {
-  .modal {
-    height: 50%;
-    width: 100vw;
-
-  }
-}
-
-.modal-header {
-background:url(https://i.gifer.com/origin/5a/5ab98406cc6c8fbba9ddb014c2bcdb80_w200.gif);
-  background-size: cover;
-  padding: 1rem;
-  opacity:70%;
-}
-.modal-content {
-  padding: 0.5rem 1rem;
-  flex: 1;
-}
-.modal-footer {
-  padding: 1rem;
-  background-color: rgba(0, 0, 0, 0.041);
-}
-
-@-webkit-keyframes scale-in-center {
-  0% {
-    -webkit-transform: scale(0);
-    transform: scale(0);
-  }
-  100% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-  }
-}
-@keyframes scale-in-center {
-  0% {
-    -webkit-transform: scale(0);
-    transform: scale(0);
-  }
-  100% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-  }
-}
-
-.subtitulo{
-  color:white;
-  text-align: center;
-}
-
-.subtitulo1{
-  color:white;
-  text-align: center;
-}
-    </style>
-<div id="mySidebar" class="sidebar">
-        <div class="sidebar-header">
-            <h3>Menu</h3>
-            <button class="toggle-btn" onclick="toggleNav()">
-                <i class="fas fa-bars"></i>
-            </button>
-        </div>
-        <a href="#"><i class="fas fa-home"></i> <span>Inicio</span></a>
-        <a href="#"><i class="fa fa-file-text" aria-hidden="true" id="abrirmodal" onclick="openModal()"></i> <span class="abrirmodal"onclick="openModal()">Serviços</span></a>
-        <a href="#"><i class="fa fa-download" aria-hidden="true" id="abrirmodal" onclick="openModal()"></i> <span class="abrirmodal"onclick="openModal()">Downloads</span></a>
-        <a href="#"><i class="fa fa-link" aria-hidden="true" id="abrirmodal" onclick="openModal()"></i><span class="abrirmodal"onclick="openModal()">Links Uteis</span></a>
-        <a href="#"><i class="fa fa-envelope" aria-hidden="true" id="abrirmodal" onclick="openModal()"></i> <span class="abrirmodal"onclick="openModal()">Contato</span></a>
-       <a href="#"><i class="fa-solid fa-circle-info" aria-hidden="true" id="abrirmodal"onclick="openModal()"></i> <span class="abrirmodal"onclick="openModal()">Sobre</span></a>     
-  </div>
-    <div id="main">
-      <div class="title_loop"> 
-        <div class="title"> <span>Site em construção.</span></div> 
-        </div>
-      <br>
-        <p class="textoneon1">Aguarde por novidades!</p>
-    </div>	
-</body>
-<!--modal-->
- <div class="modal-overlay" id="overlay">
-        <div class="modal" id="modal">
-            <div class="modal-header">
-<h3 class="subtitulo"></h3>            </div>
-            <div class="modal-content">
-                <form>
-				<!--<input type="text" class="input" placeholder="Digite o Nome completo"><br><br>
-				<input type="email" class="email" placeholder="Digite um e-mail válido"><br><br>
-				<input type="button" class="enviar" value="Enviar Dados">-->
-<h3 class="subtitulo1">Conteúdo em desenvolvimento.</h3>                     
-			</form>
-            </div>
-            <div class="modal-footer">
-                
-            </div>
-        </div>
+  <header>
+    <h1 id="logo">A. A. R. Informática</h1>
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
- <!-- partial -->
-  <script  src="./script.js"></script>
-  <script>
-      function toggleNav() {
-          const sidebar = document.getElementById("mySidebar");
-          const main = document.getElementById("main");
-          sidebar.classList.toggle("closed");
-          if (window.innerWidth <= 768) {
-              sidebar.classList.toggle("open");
-          }
-      }
 
-    /*modal*/
-const handleClickOutside = (event) => {
-    let overlay = document.getElementById("overlay");
-    let modal = document.getElementById("modal");
-    if (!modal.contains(event.target)) {
-        modal.style.display = 'none';
-        overlay.style.display = 'none';
-        document.removeEventListener('click', handleClickOutside, false);
-    }
-}
+    <nav>
+      <ul>
+        <li data-target="hero"><i class="fas fa-home"></i> Início</li>
+        <li data-target="pc-maintenance"><i class="fas fa-tools"></i> Serviços</li>
+        <li data-target="contact"><i class="fas fa-envelope"></i> Contato</li>
+        <li data-target="about"><i class="fas fa-info-circle"></i> Sobre</li>
+      </ul>
+    </nav>
+  </header>
 
-const openModal = () => {
-    let overlay = document.getElementById("overlay");
-    let modal = document.getElementById("modal");
-    overlay.style.display = 'flex'
-    modal.style.display = 'flex'
-    setTimeout(() => { document.addEventListener('click', handleClickOutside, false) }, 200);
-}
+  <section class="hero" id="hero">
+    <h2 class="falling-text">
+      <span>S</span><span>u</span><span>p</span><span>o</span><span>r</span><span>t</span><span>e</span>
+      <span> </span>
+      <span>T</span><span>é</span><span>c</span><span>n</span><span>i</span><span>c</span><span>o</span>
+      <span> </span>
+      <span>P</span><span>r</span><span>o</span><span>f</span><span>i</span><span>s</span><span>s</span><span>i</span><span>o</span><span>n</span><span>a</span><span>l</span>
+    </h2>
+    <p class="subtitle">Diagnóstico, manutenção e soluções em TI para quem precisa — seja empresa ou residência.</p>
+    <button class="region-button">Verifique as regiões atendidas para visita técnica.</button>
+  </section>
 
-  </script>
+  <section class="services">
+    <div class="card">
+      <i class="fas fa-laptop-medical"></i>
+      <h3>Manutenção de PCs</h3>
+      <p>Limpeza, upgrades e reparos em computadores e notebooks.</p>
+      <a href="#pc-maintenance" class="read-more">Ler mais...</a>
+    </div>
 
+    <div class="card">
+      <i class="fas fa-network-wired"></i>
+      <h3>Redes & Conectividade</h3>
+      <p>Configuração de redes locais, Wi-Fi e segurança de dados.</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-shield-alt"></i>
+      <h3>Segurança Digital</h3>
+      <p>Antivírus, backups e proteção contra ameaças virtuais.</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-headset"></i>
+      <h3>Suporte Remoto</h3>
+      <p>Atendimento rápido via acesso remoto para resolução de problemas.</p>
+    </div>
+  </section>
+
+  <section class="pc-maintenance" id="pc-maintenance">
+    <h2>Manutenção de PCs</h2>
+    <div class="maintenance-content">
+      <p>Serviço completo de <strong>manutenção preventiva e corretiva</strong> para computadores e notebooks. Ideal para quem busca desempenho, segurança e longevidade dos equipamentos.</p>
+      <ul>
+        <li>🔧 <strong>Diagnóstico técnico:</strong> identificação precisa de falhas de hardware e software.</li>
+        <li>🧼 <strong>Limpeza física e interna:</strong> remoção de poeira, troca de pasta térmica, higienização de componentes para melhorar desempenho e evitar superaquecimento.</li>
+        <li>⚙️ <strong>Upgrades personalizados:</strong> instalação de SSDs, expansão de memória RAM, substituição de peças obsoletas.</li>
+        <li>💻 <strong>Otimização de sistema:</strong> formatação, reinstalação de sistemas operacionais, remoção de vírus, ajustes de desempenho e segurança.</li>
+        <li>📦 <strong>Backup e recuperação de dados:</strong> proteção de arquivos importantes antes de qualquer intervenção técnica.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2>Fale Conosco</h2>
+    <form>
+      <input type="text" placeholder="Seu nome" required />
+      <input type="email" placeholder="Seu e-mail" required />
+      <textarea rows="5" placeholder="Sua mensagem" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <section id="about" style="padding: 3rem 2rem; text-align: center;">
+    <h2>Sobre Nós</h2>
+    <p>Somos especialistas em soluções de TI com atendimento personalizado e técnico qualificado.</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 - A. A. R. Informática. Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- Referência ao JavaScript externo -->
+  <script src="script.js" defer></script>
 </body>
 </html>
